@@ -1,0 +1,15 @@
+{
+  "name": "cmdctrl",
+  "description": "Agent skills from Cmd+Ctrl.",
+  "owner": {
+    "name": "Cmd+Ctrl",
+    "url": "https://cmd-ctrl.ai"
+  },
+  "plugins": [
+    {
+      "name": "refute",
+      "source": "./",
+      "description": "Tell a fresh agent the change is broken and to prove it. Fix, repeat, stop when it converges."
+    }
+  ]
+}

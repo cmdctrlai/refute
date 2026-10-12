@@ -1,0 +1,12 @@
+{
+  "name": "refute",
+  "version": "1.0.0",
+  "description": "Tell a fresh agent the change is broken and to prove it. Fix, repeat, stop when it converges.",
+  "author": {
+    "name": "Cmd+Ctrl",
+    "url": "https://cmd-ctrl.ai"
+  },
+  "homepage": "https://docs.cmd-ctrl.ai/blog/refute-dont-review",
+  "repository": "https://github.com/cmdctrlai/refute",
+  "license": "MIT"
+}
