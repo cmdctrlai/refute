@@ -40,10 +40,7 @@ Give it the requirement verbatim. It needs the requirement, the commit range and
 
 ## The loop
 
-1. Fix every confirmed defect. Keep the refuter's failing test.
-2. Dispatch a **new** refuter with the same prompt and the new commit range.
-3. Stop when a round confirms nothing, or only low-severity defects outside the requirement.
-4. Escalate to a human when it stops converging: a round finds as many defects as the last, or worse ones; the same invariant breaks again in a new form; or five rounds have passed.
+Fix, re-dispatch, stop or escalate – the rules are in [`SKILL.md`](skills/refute/SKILL.md).
 
 Just want the prompt? It's in [`skills/refute/references/refuter-prompt.md`](skills/refute/references/refuter-prompt.md).
 
