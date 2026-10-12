@@ -16,10 +16,12 @@ You are the author's side of the loop. A **fresh** sub-agent does the refuting. 
 Collect exactly these, and nothing about how you built it:
 
 - **Requirement** – verbatim, as the user gave it. If it was spread across messages, quote each part.
-- **Commit range** – `<base>..<head>` on the branch under test. Commit first if the work is uncommitted.
+- **Commit range** – `<base>..<head>` on the branch under test. If the work is uncommitted, ask the user whether to commit it first.
 - **Test command** – the command that runs the relevant tests.
-- **How to exercise it for real** (optional) – a server on a spare port, a test database, real data to replay.
+- **How to exercise it for real** – a server on a spare port, a test database, real data to replay. Not every environment supports this. If the user hasn't said, ask whether it does and how to proceed.
 - **Out of scope** (optional) – known issues tracked elsewhere.
+
+Never commit anything without the user's explicit approval – not the work, not fixes, not the refuter's tests.
 
 If the requirement is missing or ambiguous, ask the user before dispatching. A refuter with the wrong requirement proves the wrong thing.
 
@@ -37,14 +39,18 @@ A finding counts only with evidence: a failing test, a command plus its output, 
 
 For each confirmed defect:
 
-- **Inside the requirement** – fix it, and keep the refuter's failing test in the suite.
+- **Inside the requirement** – fix it, and keep the refuter's failing test as the guard.
 - **Outside the requirement** – report it to the user; don't fix it in this change.
+
+The refuter's tests are left uncommitted. Name the file and ask the user what to do with each test – keep, skip, move or delete.
+
+If the refuter could not exercise the change live, say what that leaves unproven and ask the user how to proceed.
 
 If you believe a running repro is wrong, ask the user. Don't argue it away.
 
 ## 4. Loop
 
-Commit the fixes, then dispatch a **new** refuter with the same prompt and the updated commit range. Track each round's confirmed defects and their severity.
+Once the user approves committing the fixes, dispatch a **new** refuter with the same prompt and the updated commit range. Track each round's confirmed defects and their severity.
 
 - **Stop** when a round confirms nothing, or only low-severity defects outside the requirement.
 - **Escalate to the user** when it stops converging:

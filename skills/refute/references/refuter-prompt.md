@@ -25,9 +25,10 @@ A finding counts only with evidence: a failing test, or a command plus its
 output, or a line-numbered path from input to wrong result. "Could not break
 it" is valid if you list what you tried.
 
-Rules: don't modify committed code; put failing tests in a new uncommitted
-file and name the path. Don't restart shared services; kill only processes
-you started.
+Rules: don't modify committed code and don't commit anything; put failing
+tests in a new uncommitted file and name the path. Don't restart shared
+services; kill only processes you started. If you can't exercise it live,
+say why and what that leaves unproven.
 
 Report: each confirmed defect with severity (high/medium/low), its repro, and
 whether it is inside the requirement above; then what you tried that held.
