@@ -6,7 +6,7 @@
     "name": "Cmd+Ctrl",
     "url": "https://cmd-ctrl.ai"
   },
-  "homepage": "https://docs.cmd-ctrl.ai/blog/refute-dont-review",
+  "homepage": "https://github.com/cmdctrlai/refute",
   "repository": "https://github.com/cmdctrlai/refute",
   "license": "MIT"
 }

@@ -4,8 +4,6 @@
 
 An [Agent Skill](https://agentskills.io) that verifies a code change by telling a fresh sub-agent it's broken and to prove it. Your main agent fixes what the refuter confirms, sends a new refuter, and repeats until a round comes back clean – or escalates to you when it stops converging.
 
-Why: [Refute, Don't Review](https://docs.cmd-ctrl.ai/blog/refute-dont-review).
-
 ## Install
 
 **Claude Code**
